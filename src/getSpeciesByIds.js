@@ -5,12 +5,11 @@ function getSpeciesByIds(...ids) {
   if (ids === undefined) {
     return [];
   }
-  for (let index = 0; index < ids.length; index+=1) {
-    result.push((data.species.filter((element) => element.id === ids[index]))[0]);    
+  for (let index = 0; index < ids.length; index += 1) {
+    let obj = data.species.filter((element) => element.id === ids[index]);
+    result.push(obj[0]);
   }
   return result;
 }
 
 module.exports = getSpeciesByIds;
-
-
