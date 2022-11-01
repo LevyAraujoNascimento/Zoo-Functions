@@ -6,7 +6,7 @@ function getSpeciesByIds(...ids) {
     return [];
   }
   for (let index = 0; index < ids.length; index += 1) {
-    let obj = data.species.filter((element) => element.id === ids[index]);
+    const obj = data.species.filter((element) => element.id === ids[index]);
     result.push(obj[0]);
   }
   return result;
