@@ -5,10 +5,8 @@ function countAnimals(animal) {
   if (animal === undefined) {
     for (let index = 0; index < data.species.length; index += 1) {
       const ficha = data.species[index];
-      const nome = ficha.name;
-      const quantidade = ficha.residents.length;
-      Object.defineProperty(result, nome, {
-        value: quantidade,
+      Object.defineProperty(result, ficha.name, {
+        value: ficha.residents.length,
         enumerable: true,
       });
     }
