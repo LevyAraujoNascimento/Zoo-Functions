@@ -1,11 +1,11 @@
 const data = require('../data/zoo_data');
 
 function isManager(id) { 
-    //refazer
+    return id;
 }
 
 function getRelatedEmployees(managerId) { 
-    //refazer
+    return isManager(managerId);
 }
 
 module.exports = { isManager, getRelatedEmployees };
