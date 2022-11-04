@@ -17,7 +17,7 @@ function calculateEntry(entrants) {
     return 0;
   }
   const { child, adult, senior } = countEntrants(entrants);
-  return (data.prices.adult*adult)+(data.prices.child*child)+(data.prices.senior*senior);
+  return (data.prices.adult * adult) + (data.prices.child * child) + (data.prices.senior * senior);
 }
 
 module.exports = { calculateEntry, countEntrants };
