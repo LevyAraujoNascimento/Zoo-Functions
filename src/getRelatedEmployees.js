@@ -3,7 +3,7 @@ const data = require('../data/zoo_data');
 function isManager(id) {
   let gerentes = [];
   for (let index = 0; index < data.employees.length; index += 1) {
-    gerentes = gerentes.concat(data.employees[index].managers);  
+    gerentes = gerentes.concat(data.employees[index].managers);
   }
   return gerentes.some((element) => element === id);
 }
