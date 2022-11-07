@@ -1,19 +1,27 @@
 const data = require('../data/zoo_data');
 
 function countEntrants(entrants) {
-  const child = entrants.filter((element) => element.age < 18);
-  const adult = entrants.filter((element) => element.age >= 18 && element.age < 50);
-  const senior = entrants.filter((element) => element.age >= 50);
   const result = {
-    child: child.length,
-    adult: adult.length,
-    senior: senior.length,
+    child: 0,
+    adult: 0,
+    senior: 0,
   };
+  entrants.forEach((element) => {
+    if (element.age < 18) {
+      result.child += 1;
+    }
+    if (element.age >= 18 && element.age < 50) {
+      result.adult += 1;
+    }
+    if (element.age >= 50) {
+      result.senior += 1;
+    }
+  });
   return result;
 }
 
 function calculateEntry(entrants) {
-  if (entrants === undefined || entrants.length === 0) {
+  if (entrants === undefined || entrants.length === 0 || Object.keys(entrants).length === 0) {
     return 0;
   }
   const { child, adult, senior } = countEntrants(entrants);
