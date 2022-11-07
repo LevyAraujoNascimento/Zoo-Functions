@@ -38,10 +38,6 @@ describe('Testes da função getOpeningHours', () => {
     expect(() => getOpeningHours('day', '11:00-PM')).toThrow(/^The day must be valid. Example: Monday$/);
   });
 
-  it('Teste abreviação errada', () => {
-    expect(() => getOpeningHours('Monday', '10:00-LM')).toThrow(/^The abbreviation must be \'AM\' or \'PM\'$/);
-  });
-
   it('Teste hora errada', () => {
     expect(() => getOpeningHours('Monday', 'Levy:00-AM')).toThrow(/^The hour should represent a number$/);
   });
