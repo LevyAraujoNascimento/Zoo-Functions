@@ -17,7 +17,7 @@ const getAnimals = (dia) => {
 
 const horarioDia = (dia) => {
   const { open, close } = data.hours[dia];
-  result = {};
+  const result = {};
   let ofcH = '';
   let exht = '';
   if (open === 0 && close === 0) {
